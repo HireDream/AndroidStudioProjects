@@ -105,6 +105,7 @@ class Rocket
                     canvas.drawCircle( ox + x, oy - y, 2f, paint );
                 }
 
+                paint.setColor( Color.BLACK );
 
                 for ( i = 0; i < patch; ++i )
                 {
@@ -190,6 +191,7 @@ class Fireworks
 
     public void doDraw( Canvas canvas, Paint paint )
     {
+        canvas.drawColor( Color.BLACK );
 
         int i, e, p, l;
         long s;
@@ -253,6 +255,7 @@ public class FireworkLayout extends SurfaceView implements SurfaceHolder.Callbac
 
             paint = new Paint();
             paint.setStrokeWidth( 2 / getResources().getDisplayMetrics().density );
+            paint.setColor( Color.BLACK );
             paint.setAntiAlias( true );
         }
 

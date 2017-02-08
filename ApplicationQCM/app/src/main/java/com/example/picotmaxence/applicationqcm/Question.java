@@ -52,11 +52,6 @@ public class Question extends AppCompatActivity implements View.OnClickListener 
         this.question.setTypeface(typeFace);
 
         this.inculdeLayout();
-
-        FireworkLayout firework = new FireworkLayout( this );
-        RelativeLayout surface = (RelativeLayout) findViewById(R.id.activity_question_one);
-        surface.addView( firework );
-
     }
 
     @Override
