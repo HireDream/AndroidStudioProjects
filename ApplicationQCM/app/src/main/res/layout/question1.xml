@@ -8,7 +8,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="143dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/radioGroup">
 
         <RadioButton
             android:text="Canberra"
@@ -31,5 +32,15 @@
             android:id="@+id/radioButton"
             android:layout_weight="1" />
     </RadioGroup>
+
+    <Button
+        android:text="Valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_marginTop="51dp"
+        android:id="@+id/valider1" />
 
 </RelativeLayout>

@@ -4,15 +4,6 @@
     android:id="@+id/layout_question2">
 
     <CheckBox
-        android:text="Java"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="110dp"
-        android:id="@+id/checkBox" />
-
-    <CheckBox
         android:text="PHP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +27,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/checkBox3"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp"
-        android:id="@+id/checkBox4" />
+        android:id="@+id/checkBox4"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_alignStart="@+id/checkBox2" />
+
+    <Button
+        android:text="Valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/valider2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp" />
+
+    <CheckBox
+        android:text="Java"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="193dp"
+        android:id="@+id/checkBox"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

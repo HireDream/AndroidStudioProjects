@@ -2,8 +2,10 @@ package com.example.picotmaxence.applicationqcm;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -12,6 +14,8 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,8 +48,8 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                 "Qu'elle est la capitale de l'Australie ?",
                 "Cochez les langages de programmation orientés objet",
                 "Dennis Ritchie est-il l'un des créateur de Google ?",
-                "Quelle est ta nationalité ?",
-                "Qu'elle est la date de la première version du langage Java ?"
+                "Nationalité de Bill Gates ?",
+                "Date de fin de la Première Guerre mondiale ?"
         };
 
         Intent intent = getIntent();
@@ -66,6 +70,44 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         for (boolean b : this.boolQuestions ) {
             if ( b )
                 i++;
+        }
+
+        if ( i == 5 ) {
+            Display display = getWindowManager().getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+            new ParticleSystem(this, 80, R.drawable.confetti2, 10000)
+                    .setSpeedModuleAndAngleRange(0f, 0.3f, 180, 180)
+                    .setRotationSpeed(144)
+                    .setAcceleration(0.00005f, 100)
+                    .emit(size.x,0, 8);
+            new ParticleSystem(this, 80, R.drawable.confetti6, 10000)
+                    .setSpeedModuleAndAngleRange(0f, 0.3f, 180, 180)
+                    .setRotationSpeed(144)
+                    .setAcceleration(0.00005f, 100)
+                    .emit(size.x,0, 8);
+
+            new ParticleSystem(this, 80, R.drawable.confetti3, 10000)
+                    .setSpeedModuleAndAngleRange(0f, 0.3f, 180, 180)
+                    .setRotationSpeed(144)
+                    .setAcceleration(0.00005f, 100)
+                    .emit(size.x,0, 8);
+
+            new ParticleSystem(this, 80, R.drawable.confetti, 10000)
+                    .setSpeedModuleAndAngleRange(0f, 0.3f, 0, 0)
+                    .setRotationSpeed(144)
+                    .setAcceleration(0.00005f, 100)
+                    .emit(0,0, 8);
+            new ParticleSystem(this, 80, R.drawable.confetti4, 10000)
+                    .setSpeedModuleAndAngleRange(0f, 0.3f, 0, 0)
+                    .setRotationSpeed(144)
+                    .setAcceleration(0.00005f, 100)
+                    .emit(0,0, 8);
+            new ParticleSystem(this, 80, R.drawable.confetti5, 10000)
+                    .setSpeedModuleAndAngleRange(0f, 0.3f, 0, 0)
+                    .setRotationSpeed(144)
+                    .setAcceleration(0.00005f, 100)
+                    .emit(0,0, 8);
         }
 
         this.progression.setText("Progression : "+i+"/5");
